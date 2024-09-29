@@ -24,8 +24,6 @@ def predict_quality(model: KNeighborsClassifier, x):
         1: "Sedang",
         2: "Tinggi"
     }
-    print(x)
-    print(model.predict(x)[0])
     return quality[model.predict(x)[0]]
 
 class Runtime:
@@ -238,4 +236,3 @@ with model_predict:
 
         predicted = predict_quality(app._model, inp)
         st.write(f"Hasil prediksi menunjukkan susu berkualitas `{predicted}`.")
-        print(predicted)
